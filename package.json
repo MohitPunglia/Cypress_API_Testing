@@ -1,0 +1,14 @@
+{
+  "name": "restfulbooker",
+  "version": "1.0.0",
+  "description": "Testing of API",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "Mohit Punglia",
+  "license": "ISC",
+  "devDependencies": {
+    "cypress": "^13.6.6"
+  }
+}
