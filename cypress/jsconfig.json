@@ -2,6 +2,7 @@
   "include": ["./node_modules/cypress", "**/**/*.js"],
   "compilerOptions": {
     "types":["Cypress"],
-    "resolveJsonModule": true
+    "resolveJsonModule": true,
+    "removeComments": false
   }
 }
