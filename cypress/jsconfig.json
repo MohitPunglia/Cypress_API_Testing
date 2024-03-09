@@ -2,6 +2,6 @@
   "include": ["./node_modules/cypress", "**/**/*.js"],
   "compilerOptions": {
     "types":["Cypress"],
-    "resolveJsonModule": true
+    "resolveJsonModule": false
   }
 }
