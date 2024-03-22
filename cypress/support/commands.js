@@ -23,3 +23,65 @@
 //
 // -- This will overwrite an existing command --
 // Cypress.Commands.overwrite('visit', (originalFn, url, options) => { ... })
+
+Cypress.Commands.add('generateRandomEmail',()=>{
+    const randomString = Math.random().toString(36).substring(2, 10)
+    const email = randomString + "@gmail.com"
+    return email
+})
+
+Cypress.Commands.add('getAPI',(pathparam)=>{
+
+    cy.request({
+        method:'GET',
+        url:'/'+ pathparam,
+        headers:{
+            'Accept': 'application/json',
+            'Content-Type': 'application/json',
+            'Authorization': 'Bearer a9d96e96cdf288cfb836eb60160cb0353e1caf99288e51a748b9e731f80dcf19'
+        }
+     
+    })
+})
+
+Cypress.Commands.add('postAPI',(payload)=>{
+
+    cy.request({
+        method:'POST',
+        url:'/',
+        headers:{
+            'Accept': 'application/json',
+            'Content-Type': 'application/json',
+            'Authorization': 'Bearer a9d96e96cdf288cfb836eb60160cb0353e1caf99288e51a748b9e731f80dcf19'
+        },
+        body:payload
+    })
+})
+
+Cypress.Commands.add('putAPI',(pathparam)=>{
+
+    cy.request({
+        method:'PUT',
+        url:'/'+ pathparam,
+        headers:{
+            'Accept': 'application/json',
+            'Content-Type': 'application/json',
+            'Authorization': 'Bearer a9d96e96cdf288cfb836eb60160cb0353e1caf99288e51a748b9e731f80dcf19'
+        }
+     
+    })
+})
+
+Cypress.Commands.add('deleteAPI',(pathparam)=>{
+
+    cy.request({
+        method:'DELETE',
+        url:'/'+ pathparam,
+        headers:{
+            'Accept': 'application/json',
+            'Content-Type': 'application/json',
+            'Authorization': 'Bearer a9d96e96cdf288cfb836eb60160cb0353e1caf99288e51a748b9e731f80dcf19'
+        },
+     
+    })
+})
